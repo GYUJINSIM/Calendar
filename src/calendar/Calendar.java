@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Calendar {
 	private static final int[] MAX_DAYS = {31,28,31,30,31,30,31,31,30,31,30,31};
 	
-	public static int MaxDaysOfMonth(int month){
+	public int MaxDaysOfMonth(int month){
 		return MAX_DAYS[month-1];
 	}
 
@@ -16,6 +16,8 @@ public class Calendar {
 		
 		Calendar cal = new Calendar();
 		System.out.print(month+"월은"+cal.MaxDaysOfMonth(month)+"일까지 있습니다.");
+		
+		scan.close();
 	}
 
 }
