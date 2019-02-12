@@ -15,7 +15,7 @@ public class Calendar {
 		int month = scan.nextInt();
 		
 		Calendar cal = new Calendar();
-		System.out.print(month+"월은"+cal.MaxDaysOfMonth(month)+"일까지 있습니다.");
+		System.out.print(month+"월은"+cal.MaxDaysOfMonth(month)+"일입니다.");
 		
 		scan.close();
 	}
