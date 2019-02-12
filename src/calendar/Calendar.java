@@ -13,15 +13,18 @@ public class Calendar {
 		Calendar cal = new Calendar();
 
 		Scanner scan = new Scanner(System.in);
-
-		System.out.print("반복횟수를 입력하시오:");
-		int multi = scan.nextInt();
-
 		
-		for (int i = 0; i < multi; i++) {	
-			System.out.print("출력하고싶은 달을 입력하시오:");			
-			int month = scan.nextInt();				
-			System.out.println(month + "월은" + cal.MaxDaysOfMonth(month) + "일까지입니다.");
+		System.out.println("출력하고싶은 달을 입력하시오(-1을 입력하면 종료)");			
+
+		int month = 1;
+		while(true){	
+			System.out.print(">");			
+			month = scan.nextInt();
+			if(month==-1)
+				break;
+			if(month==0||month>12)
+				continue;
+			System.out.println(month + "월은" + cal.MaxDaysOfMonth(month) + "일까지입니다.");			 
 		}
 		System.out.println("Fin");
 		scan.close();
